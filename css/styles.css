@@ -1,0 +1,69 @@
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.6rem;
+	background-color: #192f5e;
+}
+
+header {
+	background-color: #fff;
+	padding: 2%;
+}
+
+header a {
+	color: #3f3f3f;
+	text-decoration: none;
+	display: block; /* this will make them fill the entirety of the li */
+}
+
+nav {
+	width: 480px; /* these values will be changed later into relative units */
+	margin: 0 auto;
+}
+
+.menu a:hover, 
+.menu a:active {
+	background-color: gainsboro; 
+	border-radius: 4px;
+}
+
+.menu li {
+	line-height: 4rem;
+	text-align: center;
+	position: relative;
+	flex-grow: 1;
+	flex-shrink: 0;
+	flex-basis: auto;
+}
+
+.menu li ul {
+	visibility: hidden;
+	opacity: 0;
+	position: absolute;
+	left: 0;
+	display: none;
+	transition: all 0.5s ease; /*sides seconds */
+}
+
+.menu li:hover >ul,
+.menu li > ul:hover {
+	visibility: visible;
+	opacity: 1;
+	display: block;
+}
+
+/* ^^^^ .menu li in hover state with a ul inside, and .menu li with a ul in it's hover state inside */
+
+.flex-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+footer {
+	color: #fff;
+	text-align: center;
+	line-height: 3;
+}
